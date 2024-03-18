@@ -14,7 +14,7 @@ setup_requirements = ["pytest-runner"]
 test_requirements = ["pytest>=3"]
 
 extras_requirements = {
-    "proxy": ["websockets_proxy", "python-socks[asyncio]"]
+    "proxy": ["websockets_proxy>=0.1.1"]
 }
 
 setup(

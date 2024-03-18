@@ -104,7 +104,8 @@ class WebexWebsocketClient(object):
                                                             f"{verb}/{activity_id}")
         headers = {"Authorization": f"Bearer {self.access_token}"}
         conversation_message = requests.get(conversation_message_url,
-                                            headers=headers).json()
+                                            headers=headers,
+                                            proxies=self.proxies).json()
         logger.debug(f"conversation_message={conversation_message}")
         return conversation_message['id']
 
